@@ -1,4 +1,4 @@
-<p align="center"><a href="https://aquadic.com/" target="_blank"><img src="https://AQuadic.com/img/logo.svg" width="400"></a></p>
+<p align="center"><a href="https://aquadic.com/" target="_blank"><img src="/AQ%20Flutter%20Tools.png"></a></p>
 
 Made by [AQuadic](https://aquadic.com)
 
