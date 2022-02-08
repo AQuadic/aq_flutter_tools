@@ -62,6 +62,7 @@ class ResponsiveImageModel {
   String? name;
   String? fileName;
   String? mimeType;
+  String? url;
   num? size;
   String? _fallbackImage;
   List<ImageSize>? _images;
@@ -77,6 +78,7 @@ class ResponsiveImageModel {
       name = json['name'];
       fileName = json['file_name'];
       mimeType = json['mime_type'];
+      url = json['url'];
       size = json['size'];
       for (final img in json['responsive_urls']) {
         (_images ??= <ImageSize>[]).add(ImageSize.fromLink(img));
@@ -98,6 +100,7 @@ class ResponsiveImageModel {
       name = json['name'];
       fileName = json['file_name'];
       mimeType = json['mime_type'];
+      url = json['url'];
       size = json['size'];
 
       for (final img in json['generated_conversions'].keys) {
