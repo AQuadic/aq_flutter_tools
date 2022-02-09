@@ -127,6 +127,10 @@ class ResponsiveImageModel {
       _map[9999999999] = _fallbackImage ?? '';
     }
 
+    if (isNotEmpty(url) && (mimeType?.contains('image') ?? false)) {
+      _map[9999999999] = url ?? '';
+    }
+
     return _map;
   }
 
