@@ -180,8 +180,13 @@ class ImageSize {
 
   ImageSize.fromLink(this.link) {
     final _splits = link.split("_");
-    width = num.parse(_splits[_splits.length - 2].split(".").first);
-    height = num.parse(_splits.last.split(".").first);
+    if (_splits.length <= 1) {
+      width = 0;
+      height = 0;
+    } else {
+      width = num.parse(_splits[_splits.length - 2].split(".").first);
+      height = num.parse(_splits.last.split(".").first);
+    }
   }
 
   Map<int, String> toMap() => {width.toInt(): link};
