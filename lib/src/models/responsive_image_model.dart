@@ -181,8 +181,8 @@ class ImageSize {
   ImageSize.fromLink(this.link) {
     final _splits = link.split("_");
     if (_splits.length <= 1) {
-      width = 0;
-      height = 0;
+      width = 9999999999;
+      height = 9999999999;
     } else {
       width = num.parse(_splits[_splits.length - 2].split(".").first);
       height = num.parse(_splits.last.split(".").first);
