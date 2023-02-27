@@ -180,7 +180,7 @@ class ImageSize {
 
   ImageSize.fromLink(this.link) {
     final _splits = link.split("_");
-    if (_splits.length <= 1) {
+    if (_splits.length < 2) {
       width = 9999999999;
       height = 9999999999;
     } else {
