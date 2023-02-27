@@ -184,8 +184,8 @@ class ImageSize {
       width = 9999999999;
       height = 9999999999;
     } else {
-      width = num.parse(_splits[_splits.length - 2].split(".").first);
-      height = num.parse(_splits.last.split(".").first);
+      width = num.tryParse(_splits[_splits.length - 2].split(".").first) ?? 9999999999;
+      height = num.tryParse(_splits.last.split(".").first) ?? 9999999999;
     }
   }
 
