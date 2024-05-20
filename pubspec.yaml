@@ -5,7 +5,7 @@ homepage: "https://AQuadic.com"
 
 environment:
   sdk: ">=2.15.0 <3.0.0"
-  flutter: ">=2.9.0 <3.0.0"
+  flutter: ">=2.9.0"
 
 dependencies:
   flutter:
