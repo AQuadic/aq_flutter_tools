@@ -12,7 +12,7 @@ Made by [AQuadic](https://aquadic.com)
 ## Script Requirement
 This script assumes you have the requirement as the following:
 
-- Flutter Version `">=2.9.0 <3.0.0"`
+- Flutter Version `">=2.9.0"`
 - Dart Version `">=2.15.0 <3.0.0"`
 
 ## Usage
