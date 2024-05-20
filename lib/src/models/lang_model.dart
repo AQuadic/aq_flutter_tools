@@ -1,5 +1,7 @@
-import 'package:flutter/material.dart' show BuildContext, MediaQuery;
+import 'package:flutter/material.dart' show BuildContext;
 import 'package:quiver/strings.dart';
+import 'package:easy_localization/easy_localization.dart';
+import 'dart:convert';
 
 /// We use this Lang image model to match our APIs.
 /// Specially Laravel APIs using Spatie's Translatable.
