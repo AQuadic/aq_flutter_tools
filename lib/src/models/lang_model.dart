@@ -1,7 +1,8 @@
+import 'dart:convert';
+
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart' show BuildContext;
 import 'package:quiver/strings.dart';
-import 'package:easy_localization/easy_localization.dart';
-import 'dart:convert';
 
 /// We use this Lang image model to match our APIs.
 /// Specially Laravel APIs using Spatie's Translatable.
@@ -21,6 +22,12 @@ class LangModel {
   String defaultLanguage = 'en';
   static int LANGUAGE_KEY_MAX_LENGTH = 3;
   static List<String> LANGUAGE_FALLBACK_KEYS = ['ar', 'en'];
+
+  factory LangModel.fromJson(Map<String, dynamic> json) {
+    return LangModel.fromMap(m);
+  }
+
+  Map<String, dynamic> toJson() => this.languages;
 
   LangModel.fromMap(dynamic m, {this.defaultLanguage = 'en'}) {
     if (m is String) {
@@ -62,7 +69,7 @@ class LangModel {
         continue;
       }
 
-      if(value is String && isBlank(value)) {
+      if (value is String && isBlank(value)) {
         // if value is string and value is empty then ignore.
         continue;
       }
