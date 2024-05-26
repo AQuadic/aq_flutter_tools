@@ -24,7 +24,7 @@ class LangModel {
   static List<String> LANGUAGE_FALLBACK_KEYS = ['ar', 'en'];
 
   factory LangModel.fromJson(Map<String, dynamic> json) {
-    return LangModel.fromMap(m);
+    return LangModel.fromMap(json);
   }
 
   Map<String, dynamic> toJson() => this.languages;
