@@ -14,8 +14,4 @@ dependencies:
   convert:
   easy_localization:
 
-dev_dependencies:
-  build_runner: ^2.4.8 # flutter pub run build_runner build --delete-conflicting-outputs
-  json_serializable: ^6.7.1
-
 flutter:
