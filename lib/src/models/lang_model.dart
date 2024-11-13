@@ -56,6 +56,11 @@ class LangModel {
     for (var key in m.keys) {
       final value = m[key];
 
+      if(value == null) {
+        // if null value just continue.
+        continue;
+      }
+
       if (key is! String || key.length > LANGUAGE_KEY_MAX_LENGTH) {
         // if key is not string, this is not a language
         // if key.length is more than max length, it's not a language
