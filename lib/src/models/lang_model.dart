@@ -120,4 +120,14 @@ class LangModel {
         getDefaultLang() ??
         getFirstLang();
   }
+
+  String? getWithReplace(BuildContext context, Map<String, String> replace) {
+    String? output = get(context);
+
+    replace.forEach((key, value) {
+      output = output?.replaceAll(key, value);
+    });
+
+    return output;
+  }
 }
