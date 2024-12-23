@@ -23,8 +23,14 @@ class LangModel {
   static int LANGUAGE_KEY_MAX_LENGTH = 3;
   static List<String> LANGUAGE_FALLBACK_KEYS = ['ar', 'en'];
 
-  factory LangModel.fromJson(Map<String, dynamic> json) {
-    return LangModel.fromMap(json);
+  factory LangModel.fromJson(dynamic json) {
+    if (json is String) {
+      return LangModel.fromMap({
+        'en': json,
+        'ar': json,
+      });
+    } else
+      return LangModel.fromMap(json);
   }
 
   Map<String, dynamic> toJson() => this.languages;
@@ -56,7 +62,7 @@ class LangModel {
     for (var key in m.keys) {
       final value = m[key];
 
-      if(value == null) {
+      if (value == null) {
         // if null value just continue.
         continue;
       }
