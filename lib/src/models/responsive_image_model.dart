@@ -86,7 +86,7 @@ class ResponsiveImageModel {
     }
   }
 
-  Map<String, dynamic> toJson(Map<String, dynamic> json) {
+  Map<String, dynamic> toJson() {
     return {
       "id": id,
       "uuid": uuid,
