@@ -1,6 +1,6 @@
 name: aq_tools
 description: Set of tools we use here at AQuadic Softwares.
-version: 0.1.6+16
+version: 0.1.7+17
 homepage: "https://AQuadic.com"
 
 environment:
