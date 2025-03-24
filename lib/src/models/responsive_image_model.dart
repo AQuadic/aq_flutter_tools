@@ -86,6 +86,21 @@ class ResponsiveImageModel {
     }
   }
 
+  Map<String, dynamic> toJson(Map<String, dynamic> json) {
+    return {
+      "id": id,
+      "uuid": uuid,
+      "name": name,
+      "file_name": fileName,
+      "mime_type": mimeType,
+      "url": url,
+      "size": size,
+      "responsive_urls": _images?.map(
+        (e) => e.toMap(),
+      ),
+    };
+  }
+
   ResponsiveImageModel.fromImageConversion(
     json, {
     String? fallbackImage,
@@ -184,7 +199,8 @@ class ImageSize {
       width = 9999999999;
       height = 9999999999;
     } else {
-      width = num.tryParse(_splits[_splits.length - 2].split(".").first) ?? 9999999999;
+      width = num.tryParse(_splits[_splits.length - 2].split(".").first) ??
+          9999999999;
       height = num.tryParse(_splits.last.split(".").first) ?? 9999999999;
     }
   }
