@@ -96,7 +96,7 @@ class ResponsiveImageModel {
       "url": url,
       "size": size,
       "responsive_urls": _images?.map(
-        (e) => e.toMap(),
+        (e) => e.link,
       ),
     };
   }
@@ -206,6 +206,12 @@ class ImageSize {
   }
 
   Map<int, String> toMap() => {width.toInt(): link};
+
+  Map<String, dynamic> toJson() => {
+        "link": link,
+        "width": width,
+        "height": height,
+      };
 
   @override
   String toString() {
