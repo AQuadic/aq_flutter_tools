@@ -217,6 +217,6 @@ class ImageSize {
 
   @override
   String toString() {
-    return '$link - @@ - ${width}w ${height}h';
+    return '$link';
   }
 }
