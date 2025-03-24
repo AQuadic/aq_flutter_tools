@@ -95,9 +95,11 @@ class ResponsiveImageModel {
       "mime_type": mimeType,
       "url": url,
       "size": size,
-      "responsive_urls": _images?.map(
-        (e) => e.link,
-      ),
+      "responsive_urls": _images
+          ?.map(
+            (e) => e.link,
+          )
+          .toList(),
     };
   }
 
